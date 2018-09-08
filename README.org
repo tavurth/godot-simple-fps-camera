@@ -1,3 +1,4 @@
 * Very simple FPS camera in Godot 3.x
+[[screenshot.png]]
 ** Requirements:
 - Godot 3.x
