@@ -2,7 +2,7 @@ extends Camera
 
 onready var Yaw = get_parent()
 
-## Increase this value to give a faster turn speed
+## Increase this value to give a slower turn speed
 const CAMERA_TURN_SPEED = 200
 
 func _ready():
