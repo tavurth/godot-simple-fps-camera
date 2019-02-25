@@ -2,6 +2,9 @@ extends Camera
 
 onready var Yaw = get_parent()
 
+## Increase this value to give a faster turn speed
+const CAMERA_TURN_SPEED = 200
+
 func _ready():
 	## Tell Godot that we want to handle input
 	set_process_input(true)
@@ -36,12 +39,12 @@ func mouse(event):
 	## We'll use the parent node "Yaw" to set our left-right rotation
 	## This prevents us from adding the x-rotation to the y-rotation
 	## which would result in a kind of flight-simulator camera
-	Yaw.set_rotation(look_leftright_rotation(event.relative.x / -200))
+	Yaw.set_rotation(look_leftright_rotation(event.relative.x / -CAMERA_TURN_SPEED))
 
 	##
 	## Now we can simply set our y-rotation for the camera, and let godot
 	## handle the transformation of both together
-	self.set_rotation(look_updown_rotation(event.relative.y / -200))
+	self.set_rotation(look_updown_rotation(event.relative.y / -CAMERA_TURN_SPEED))
 
 func _input(event):
 	##
