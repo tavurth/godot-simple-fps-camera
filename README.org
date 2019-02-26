@@ -6,7 +6,7 @@ The purpose of this demo is to show how to create a camera in a simple way.
 You are free to use, modify and merge this in whatever way you like.
 
 ** Requirements:
-- Godot 3.x
+- [[https://godotengine.org][Godot]] 3.x
   
 ** Ideas
 The main idea I'd like to represent here is splitting the X rotation and Y rotation.
