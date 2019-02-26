@@ -1,10 +1,13 @@
-* Very simple FPS camera in Godot 3.x
+* Simple FPS camera
 
 A FPS camera made for the purposes of teaching others GDscript and godot.
 
 The purpose of this demo is to show how to create a camera in a simple way.
 You are free to use, modify and merge this in whatever way you like.
 
+** Requirements:
+- Godot 3.x
+  
 ** Ideas
 The main idea I'd like to represent here is splitting the X rotation and Y rotation.
 
@@ -19,5 +22,3 @@ than turning left and right.
 
 [[screenshot.png]]
 
-** Requirements:
-- Godot 3.x
