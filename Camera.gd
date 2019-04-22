@@ -56,7 +56,7 @@ func _enter_tree():
 	"""
 	Hide the mouse when we start
 	"""
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 
 func _leave_tree():
 	"""
