@@ -11,8 +11,8 @@ func _ready():
 
 func look_updown_rotation(rotation = 0):
 	"""
-  Returns a new Vector3 which contains only the x direction
-  We'll use this vector to compute the final 3D rotation later
+	Returns a new Vector3 which contains only the x direction
+	We'll use this vector to compute the final 3D rotation later
 	"""
 	var toReturn = self.get_rotation() + Vector3(rotation, 0, 0)
 
@@ -26,8 +26,8 @@ func look_updown_rotation(rotation = 0):
 
 func look_leftright_rotation(rotation = 0):
 	"""
-  Returns a new Vector3 which contains only the y direction
-  We'll use this vector to compute the final 3D rotation later
+	Returns a new Vector3 which contains only the y direction
+	We'll use this vector to compute the final 3D rotation later
 	"""
 	return Yaw.get_rotation() + Vector3(0, rotation, 0)
 
