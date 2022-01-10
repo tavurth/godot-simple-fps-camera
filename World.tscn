@@ -22,10 +22,12 @@ __meta__ = {
 margin_top = 20.0
 margin_right = 106.0
 margin_bottom = 38.0
-text = "Press ESC to exit
-
-WASD = Move"
+text = "WASD = Move
+ESC to exit"
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, -3.36017 )

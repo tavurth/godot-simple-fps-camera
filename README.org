@@ -22,3 +22,4 @@ than turning left and right.
 
 [[screenshot.png]]
 
+[[movement.gif]]
