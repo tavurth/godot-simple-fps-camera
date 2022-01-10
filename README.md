@@ -44,5 +44,6 @@ than turning left and right.
 
 ![img](./screenshot.png)
 
-![img](./movement.gif)
+https://user-images.githubusercontent.com/100964/148790888-7d7be461-f853-467b-9336-db23b638a546.mp4
+
 
