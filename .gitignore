@@ -1,2 +1,5 @@
+.DS_Store
+
 .import
 *.import
+build/*.zip
