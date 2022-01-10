@@ -2,7 +2,7 @@ extends KinematicBody
 
 var velocity = Vector3(0, 0, 0)
 
-const JUMP = 50
+const JUMP = 5
 const GRAVITY = .3
 const PLAYER_MOVE_SPEED = 4
 

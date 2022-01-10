@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://FPSCounter.gd" type="Script" id=1]
 [ext_resource path="res://ExitHelp.gd" type="Script" id=2]
@@ -21,6 +21,20 @@ uv1_scale = Vector3( 100, 100, 10 )
 [sub_resource type="CapsuleShape" id=6]
 radius = 0.694394
 height = 0.864053
+
+[sub_resource type="ProceduralSky" id=8]
+sky_top_color = Color( 0.0901961, 0.611765, 0.760784, 1 )
+ground_bottom_color = Color( 0.168627, 0.317647, 0.486275, 1 )
+ground_horizon_color = Color( 0.133333, 0.25098, 0.376471, 1 )
+sun_color = Color( 0.976471, 1, 0.756863, 1 )
+
+[sub_resource type="Environment" id=7]
+background_mode = 2
+background_sky = SubResource( 8 )
+fog_enabled = true
+fog_color = Color( 0.160784, 0.301961, 0.466667, 1 )
+fog_depth_end = 30.0
+ssao_intensity = 4.0
 
 [node name="Spatial" type="Spatial"]
 
@@ -45,7 +59,10 @@ __meta__ = {
 }
 
 [node name="Floor" type="StaticBody" parent="."]
-transform = Transform( 64, 0, 0, 0, 1, 0, 0, 0, 64, 0, -1.5625, 0 )
+transform = Transform( 64, 0, 0, 0, 1, 0, 0, 0, 64, 0, -2.0364, 0 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Mesh" type="MeshInstance" parent="Floor"]
 mesh = SubResource( 4 )
@@ -53,11 +70,15 @@ skeleton = NodePath("../..")
 material/0 = SubResource( 5 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Floor"]
+transform = Transform( 64, 0, 0, 0, 1, 0, 0, 0, 64, 0, 0, 0 )
 shape = SubResource( 3 )
 
 [node name="Player" type="KinematicBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.832029, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.447398, 0 )
 script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Camera" type="Camera" parent="Player"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.745983, 0 )
@@ -77,3 +98,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -3.36 )
 
 [node name="Ball3" parent="." instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -3.36 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 7 )
