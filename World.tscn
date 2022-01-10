@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://FPSCounter.gd" type="Script" id=1]
 [ext_resource path="res://ExitHelp.gd" type="Script" id=2]
 [ext_resource path="res://Camera.gd" type="Script" id=3]
+[ext_resource path="res://Player.gd" type="Script" id=4]
 
 [sub_resource type="SphereMesh" id=1]
 
@@ -13,12 +14,17 @@ margin_right = 40.0
 margin_bottom = 14.0
 text = "FPS: 0"
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="ExitHelp" type="Label" parent="."]
 margin_top = 20.0
 margin_right = 106.0
 margin_bottom = 38.0
-text = "Press ESC to exit"
+text = "Press ESC to exit
+
+WASD = Move"
 script = ExtResource( 2 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
@@ -36,11 +42,12 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -2.19066, 0, -3.36017 )
 mesh = SubResource( 1 )
 material/0 = null
 
-[node name="Yaw" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.942411, 0.334456, 0, -0.334456, 0.942411, 0, 1.15074, 1.11174 )
+[node name="Player" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+script = ExtResource( 4 )
 
-[node name="Camera" type="Camera" parent="Yaw"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.611349, -1.72262 )
+[node name="Camera" type="Camera" parent="Player"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3537, 1.11144 )
 fov = 50.0
 far = 200.0
 script = ExtResource( 3 )
