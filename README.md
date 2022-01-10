@@ -11,6 +11,12 @@
 
 # Simple FPS camera
 
+* [[https://tavurth.itch.io/godot-simple-fps-camera][Web Demo]] ←←←←
+
+![img](./screenshot.png)
+
+https://user-images.githubusercontent.com/100964/148790888-7d7be461-f853-467b-9336-db23b638a546.mp4
+
 A FPS camera made for the purposes of teaching others GDscript and godot.
 
 The purpose of this demo is to show how to create a camera in a simple way.
@@ -36,14 +42,3 @@ right rotation, while the child node takes care of vertical rotation.
 If we simply try to rotate the child node in first the X and then the Y directions
 we&rsquo;d end up with a sort of flight-simulator camera, where we can roll left and right rather
 than turning left and right.
-
-
-<a id="org160b82a"></a>
-
-## Screenshots
-
-![img](./screenshot.png)
-
-https://user-images.githubusercontent.com/100964/148790888-7d7be461-f853-467b-9336-db23b638a546.mp4
-
-
