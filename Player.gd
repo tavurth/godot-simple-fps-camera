@@ -3,8 +3,8 @@ extends KinematicBody
 var velocity = Vector3(0, 0, 0)
 
 const JUMP = 5
-const GRAVITY = .3
 const PLAYER_MOVE_SPEED = 4
+onready var GRAVITY = ProjectSettings.get("physics/3d/default_gravity") / 1000
 
 func move_forward_back(delta: float):
 	"""

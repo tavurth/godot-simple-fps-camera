@@ -60,6 +60,11 @@ action_jump={
  ]
 }
 
+[physics]
+
+3d/default_gravity=98.0
+
 [rendering]
 
+quality/driver/driver_name="GLES2"
 environment/default_environment="res://default_env.tres"
