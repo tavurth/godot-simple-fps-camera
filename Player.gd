@@ -1,6 +1,10 @@
-extends Spatial
+extends KinematicBody
 
-const PLAYER_MOVE_SPEED = 20
+var velocity = Vector3(0, 0, 0)
+
+const JUMP = 50
+const GRAVITY = .3
+const PLAYER_MOVE_SPEED = 4
 
 func move_forward_back(delta: float):
 	"""
@@ -30,3 +34,14 @@ func _process(delta: float):
 
 	elif Input.is_action_pressed("ui_right"):
 		self.move_left_right(+delta)
+
+func _physics_process(delta: float):
+	if Input.is_action_just_pressed("action_jump"):
+		if self.is_on_floor():
+			self.velocity.y += JUMP
+
+	self.velocity -= Vector3(0, GRAVITY, 0)
+	self.velocity.y = clamp(self.velocity.y, -GRAVITY * 100, GRAVITY * 100)
+
+	self.velocity = self.move_and_slide(self.velocity, Vector3(0, 1, 0))
+	self.transform = self.transform.translated(self.velocity * delta)

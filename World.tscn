@@ -1,11 +1,26 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://FPSCounter.gd" type="Script" id=1]
 [ext_resource path="res://ExitHelp.gd" type="Script" id=2]
 [ext_resource path="res://Camera.gd" type="Script" id=3]
 [ext_resource path="res://Player.gd" type="Script" id=4]
+[ext_resource path="res://1x1.png" type="Texture" id=5]
+[ext_resource path="res://Ball.tscn" type="PackedScene" id=6]
 
-[sub_resource type="SphereMesh" id=1]
+[sub_resource type="CubeMesh" id=4]
+
+[sub_resource type="SpatialMaterial" id=5]
+detail_enabled = true
+detail_blend_mode = 0
+detail_uv_layer = 0
+detail_albedo = ExtResource( 5 )
+uv1_scale = Vector3( 100, 100, 10 )
+
+[sub_resource type="BoxShape" id=3]
+
+[sub_resource type="CapsuleShape" id=6]
+radius = 0.694394
+height = 0.864053
 
 [node name="Spatial" type="Spatial"]
 
@@ -29,27 +44,36 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MeshInstance" type="MeshInstance" parent="."]
-transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, -3.36017 )
-mesh = SubResource( 1 )
-material/0 = null
+[node name="Floor" type="StaticBody" parent="."]
+transform = Transform( 64, 0, 0, 0, 1, 0, 0, 0, 64, 0, -1.5625, 0 )
 
-[node name="MeshInstance2" type="MeshInstance" parent="."]
-transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 2.01999, 0, -3.36017 )
-mesh = SubResource( 1 )
-material/0 = null
+[node name="Mesh" type="MeshInstance" parent="Floor"]
+mesh = SubResource( 4 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 5 )
 
-[node name="MeshInstance3" type="MeshInstance" parent="."]
-transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -2.19066, 0, -3.36017 )
-mesh = SubResource( 1 )
-material/0 = null
+[node name="CollisionShape" type="CollisionShape" parent="Floor"]
+shape = SubResource( 3 )
 
-[node name="Player" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+[node name="Player" type="KinematicBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.832029, 0 )
 script = ExtResource( 4 )
 
 [node name="Camera" type="Camera" parent="Player"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3537, 1.11144 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.745983, 0 )
 fov = 50.0
 far = 200.0
 script = ExtResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Player"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0 )
+shape = SubResource( 6 )
+
+[node name="Ball" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.36 )
+
+[node name="Ball2" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -3.36 )
+
+[node name="Ball3" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -3.36 )
