@@ -44,4 +44,3 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.611349, -1.72262 )
 fov = 50.0
 far = 200.0
 script = ExtResource( 3 )
-
