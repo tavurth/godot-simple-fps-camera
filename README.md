@@ -30,11 +30,11 @@ You are free to use, modify and merge this in whatever way you like.
 
 ## Ideas
 
-The main idea I&rsquo;d like to represent here is splitting the X rotation and Y rotation.
+The main idea I'd like to represent here is splitting the X rotation and Y rotation.
 
-We use a parent node Yaw, and a child node. The parent node takes care of the left and
+We use a parent node "Player", and a child node "Camera". The parent node takes care of the left and
 right rotation, while the child node takes care of vertical rotation.
 
 If we simply try to rotate the child node in first the X and then the Y directions
-we&rsquo;d end up with a sort of flight-simulator camera, where we can roll left and right rather
+we'd end up with a sort of flight-simulator camera, where we can roll left and right rather
 than turning left and right.
