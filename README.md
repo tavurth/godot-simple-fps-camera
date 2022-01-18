@@ -1,13 +1,9 @@
-# Table of Contents
-
-1.  [Simple FPS camera](#org6c52ae3)
-    1.  [Requirements:](#orgcc1c9d3)
-    2.  [Ideas](#orgb9a9226)
-    3.  [Screenshots](#org160b82a)
-
-<a id="org6c52ae3"></a>
-
 # Simple FPS camera
+
+[![img](https://awesome.re/mentioned-badge.svg)](https://github.com/godotengine/awesome-godot)
+![img](https://img.shields.io/github/license/tavurth/godot-simple-fps-camera.svg)
+![img](https://img.shields.io/github/repo-size/tavurth/godot-simple-fps-camera.svg)
+![img](https://img.shields.io/github/languages/code-size/tavurth/godot-simple-fps-camera.svg)
 
 ## [Web Demo](https://tavurth.itch.io/godot-simple-fps-camera) ←←←←
 
