@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://environment/1x1.png" type="Texture" id=1]
+
+[sub_resource type="CubeMesh" id=9]
+size = Vector3( 20, 5, 1 )
+
+[sub_resource type="SpatialMaterial" id=10]
+detail_enabled = true
+detail_blend_mode = 0
+detail_uv_layer = 0
+detail_albedo = ExtResource( 1 )
+uv1_scale = Vector3( 20, 5, 0 )
+
+[sub_resource type="ConcavePolygonShape" id=11]
+data = PoolVector3Array( -10, 2.5, 0.5, 10, 2.5, 0.5, -10, -2.5, 0.5, 10, 2.5, 0.5, 10, -2.5, 0.5, -10, -2.5, 0.5, 10, 2.5, -0.5, -10, 2.5, -0.5, 10, -2.5, -0.5, -10, 2.5, -0.5, -10, -2.5, -0.5, 10, -2.5, -0.5, 10, 2.5, 0.5, 10, 2.5, -0.5, 10, -2.5, 0.5, 10, 2.5, -0.5, 10, -2.5, -0.5, 10, -2.5, 0.5, -10, 2.5, -0.5, -10, 2.5, 0.5, -10, -2.5, -0.5, -10, 2.5, 0.5, -10, -2.5, 0.5, -10, -2.5, -0.5, 10, 2.5, 0.5, -10, 2.5, 0.5, 10, 2.5, -0.5, -10, 2.5, 0.5, -10, 2.5, -0.5, 10, 2.5, -0.5, -10, -2.5, 0.5, 10, -2.5, 0.5, -10, -2.5, -0.5, 10, -2.5, 0.5, 10, -2.5, -0.5, -10, -2.5, -0.5 )
+
+[node name="Wall" type="MeshInstance"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.35862, -5.6476 )
+mesh = SubResource( 9 )
+material/0 = SubResource( 10 )
+
+[node name="StaticBody" type="StaticBody" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+shape = SubResource( 11 )

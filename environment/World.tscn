@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://FPSCounter.gd" type="Script" id=1]
+[ext_resource path="res://player/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://environment/Wall.tscn" type="PackedScene" id=4]
+[ext_resource path="res://environment/Floor.tscn" type="PackedScene" id=5]
+[ext_resource path="res://environment/Ball.tscn" type="PackedScene" id=6]
+
+[sub_resource type="ProceduralSky" id=8]
+sky_top_color = Color( 0.0588235, 0.447059, 0.556863, 1 )
+sky_horizon_color = Color( 0.286275, 0.137255, 0.0235294, 1 )
+ground_bottom_color = Color( 0.0392157, 0.156863, 0.290196, 1 )
+ground_horizon_color = Color( 0.0313726, 0.145098, 0.266667, 1 )
+sun_color = Color( 0.976471, 1, 0.756863, 1 )
+
+[sub_resource type="Environment" id=7]
+background_mode = 2
+background_sky = SubResource( 8 )
+fog_color = Color( 0.160784, 0.301961, 0.466667, 1 )
+fog_depth_end = 30.0
+ssao_intensity = 4.0
+
+[node name="Spatial" type="Spatial"]
+
+[node name="FPSCounter" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "FPS: 0"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Help" type="Label" parent="."]
+margin_top = 20.0
+margin_right = 106.0
+margin_bottom = 38.0
+text = "E = Flashlight
+WASD = Move"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Floor" parent="." instance=ExtResource( 5 )]
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+
+[node name="Ball" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.36 )
+
+[node name="Ball2" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -3.36 )
+
+[node name="Ball3" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -3.36 )
+
+[node name="Wall" parent="." instance=ExtResource( 4 )]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 7 )

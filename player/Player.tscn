@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://player/Camera.gd" type="Script" id=1]
+[ext_resource path="res://player/Player.gd" type="Script" id=2]
+[ext_resource path="res://player/Flashlight.gd" type="Script" id=3]
+[ext_resource path="res://player/flashlight.wav" type="AudioStream" id=4]
+
+[sub_resource type="CapsuleShape" id=6]
+radius = 0.694394
+height = 0.864053
+
+[node name="Player" type="KinematicBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.447398, 0 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.745983, 0 )
+fov = 50.0
+far = 200.0
+script = ExtResource( 1 )
+
+[node name="Flashlight" type="SpotLight" parent="Camera"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.150006, 0 )
+shadow_enabled = true
+spot_range = 10.0
+spot_angle = 20.0
+script = ExtResource( 3 )
+
+[node name="Sound" type="AudioStreamPlayer" parent="Camera/Flashlight"]
+stream = ExtResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0 )
+shape = SubResource( 6 )
