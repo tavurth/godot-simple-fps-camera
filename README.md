@@ -9,8 +9,7 @@
 
 <img width="1024" alt="Screenshot 2022-02-07 at 00 40 33" src="https://user-images.githubusercontent.com/100964/152702489-7aa8abcf-82bc-448e-b9c3-baf253622e63.png">
 
-
-https://user-images.githubusercontent.com/100964/152702685-3ed9b5bd-6341-4b8d-94ec-79dfee2b4fc5.mp4
+https://user-images.githubusercontent.com/100964/152702852-34be1111-a800-4595-a8aa-71e4d976afde.mp4
 
 
 A FPS camera made for the purposes of teaching others GDscript and godot.
