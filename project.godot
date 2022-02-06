@@ -65,6 +65,11 @@ action_flashlight={
  ]
 }
 
+[layer_names]
+
+3d_render/layer_1="World"
+3d_render/layer_20="Light Cookie"
+
 [physics]
 
 3d/default_gravity=98.0
