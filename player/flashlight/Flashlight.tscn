@@ -1,6 +1,5 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://player/flashlight/light-cookie.png" type="Texture" id=1]
 [ext_resource path="res://player/flashlight/Flashlight.gd" type="Script" id=2]
 [ext_resource path="res://player/flashlight/flashlight.wav" type="AudioStream" id=3]
 
@@ -11,23 +10,13 @@ script = ExtResource( 2 )
 [node name="Sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 
-[node name="WorldLight" type="SpotLight" parent="."]
+[node name="Flashlight" type="SpotLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5 )
 light_energy = 2.0
 shadow_enabled = true
-spot_range = 10.0
-spot_angle = 20.0
-
-[node name="CookieLight" type="SpotLight" parent="."]
-light_energy = 2.0
-shadow_enabled = true
-shadow_color = Color( 0.721569, 0.721569, 0.721569, 1 )
-spot_range = 10.0
-spot_angle = 20.0
-
-[node name="LightCookie" type="Sprite3D" parent="CookieLight"]
-transform = Transform( 0.05, 6.46105e-12, 0, -8.14682e-13, 0.05, 9.09495e-13, 0, 0, 0.05, 2.91038e-11, 1.49012e-08, -0.55 )
-layers = 524288
-billboard = 1
-alpha_cut = 2
-texture = ExtResource( 1 )
+shadow_bias = -0.01
+shadow_reverse_cull_face = true
+spot_range = 20.0
+spot_attenuation = 0.164939
+spot_angle = 40.0
+spot_angle_attenuation = 0.615572
