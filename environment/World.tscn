@@ -14,7 +14,7 @@ ground_bottom_color = Color( 0.0392157, 0.156863, 0.290196, 1 )
 ground_horizon_color = Color( 0.0313726, 0.145098, 0.266667, 1 )
 sun_color = Color( 0.984314, 0.329412, 0.0470588, 1 )
 sun_latitude = 5.0
-sun_longitude = 90.0
+sun_longitude = 60.0
 
 [sub_resource type="Environment" id=7]
 background_mode = 2
@@ -45,15 +45,16 @@ __meta__ = {
 }
 
 [node name="Floor" parent="." instance=ExtResource( 5 )]
+transform = Transform( 64, 0, 0, 0, 1, 0, 0, 0, 64, 0, -2, 0 )
 
 [node name="Ball1" parent="." instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.36 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3 )
 
 [node name="Ball2" parent="." instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -3.36 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -3 )
 
 [node name="Ball3" parent="." instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -3.36 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -3 )
 
 [node name="Wall" parent="." instance=ExtResource( 4 )]
 material/0 = ExtResource( 7 )
@@ -62,11 +63,11 @@ material/0 = ExtResource( 7 )
 environment = SubResource( 7 )
 
 [node name="Sun" type="DirectionalLight" parent="WorldEnvironment"]
-transform = Transform( -4.37114e-08, -0.34202, 0.939693, 0, 0.939693, 0.34202, -1, 1.49502e-08, -4.10753e-08, 0, 0, 0 )
+transform = Transform( -0.5, -0.296198, 0.813798, 0, 0.939693, 0.34202, -0.866025, 0.17101, -0.469846, 0, 0, 0 )
 layers = 262144
 light_color = Color( 0.94902, 0.580392, 0.247059, 1 )
 light_cull_mask = 4294443007
 shadow_enabled = true
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0900202, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )

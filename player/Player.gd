@@ -15,17 +15,16 @@ func move_forward_back(in_direction: int):
 	Move the camera forward or backwards
 	"""
 	self.direction.z += in_direction
-	self.velocity += get_transform().basis.z * in_direction
+	self.velocity += get_transform().basis.z * in_direction * PLAYER_MOVE_SPEED
 
 func move_left_right(in_direction: int):
 	"""
 	Move the camera to the left or right
 	"""
 	self.direction.x += in_direction
-	self.velocity += get_transform().basis.x * in_direction
+	self.velocity += get_transform().basis.x * in_direction * PLAYER_MOVE_SPEED
 
 func blend_animations():
-	print(direction)
 	animation_tree["parameters/run/blend_position"] = -direction.z
 	animation_tree["parameters/strafe/blend_position"] = direction.x
 
@@ -49,10 +48,6 @@ func _process(_delta: float):
 
 	elif Input.is_action_pressed("ui_right"):
 		self.move_left_right(+1)
-	
-	# new_velocity = new_velocity.normalized() * PLAYER_MOVE_SPEED
-	# new_velocity.y = velocity.y
-	# self.velocity = new_velocity
 
 func _physics_process(_delta: float):
 	var snap_vector = Vector3(0, -1, 0)
