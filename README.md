@@ -11,7 +11,6 @@
 
 https://user-images.githubusercontent.com/100964/152702852-34be1111-a800-4595-a8aa-71e4d976afde.mp4
 
-
 A FPS camera made for the purposes of teaching others GDscript and godot.
 
 The purpose of this demo is to show how to create a camera in a simple way.
@@ -38,10 +37,9 @@ If we simply try to rotate the child node in first the X and then the Y directio
 we'd end up with a sort of flight-simulator camera, where we can roll left and right rather
 than turning left and right.
 
-### Light cookies
+### Player model
 
-I've attached a flashlight to the camera, but I'd like to get a [light cookie effect](https://doy2mn9upadnk.cloudfront.net/uploads/default/optimized/4X/e/9/4/e94c2386fdab91f9c3fe285fc45b314d860286fe_2_1024x797.jpeg), so I added a second light a little bit behind the first one.
+The player model was loaded as a `.glb` file with animations. The animations were downloaded from [mixamo.com](mixamo.com).
 
-In the space between the two lights I added a `Sprite3D` node with my light cookie texture, and then set the visual instance to `20` while disabling rendering of the `20` layer in my camera.
-
-This causes the light cookie to appear, but also for it to have a different shadow color than the world shadow, which is nice because it has a blended look.
+Then an AnimationTree was created and you can explore the two AnimationBlend1D which are used for moving and strafing
+.
