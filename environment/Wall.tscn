@@ -4,28 +4,28 @@
 [ext_resource path="res://environment/wall_material.tres" type="Material" id=2]
 
 [sub_resource type="CubeMesh" id=9]
-size = Vector3( 20, 5, 1 )
+size = Vector3( 20, 5, 5 )
 
 [sub_resource type="SpatialMaterial" id=10]
 detail_enabled = true
 detail_blend_mode = 0
 detail_uv_layer = 0
 detail_albedo = ExtResource( 1 )
-uv1_scale = Vector3( 20, 5, 0 )
+uv1_scale = Vector3( 20, 5, 1 )
 
 [sub_resource type="ConcavePolygonShape" id=11]
 data = PoolVector3Array( -10, 2.5, 0.5, 10, 2.5, 0.5, -10, -2.5, 0.5, 10, 2.5, 0.5, 10, -2.5, 0.5, -10, -2.5, 0.5, 10, 2.5, -0.5, -10, 2.5, -0.5, 10, -2.5, -0.5, -10, 2.5, -0.5, -10, -2.5, -0.5, 10, -2.5, -0.5, 10, 2.5, 0.5, 10, 2.5, -0.5, 10, -2.5, 0.5, 10, 2.5, -0.5, 10, -2.5, -0.5, 10, -2.5, 0.5, -10, 2.5, -0.5, -10, 2.5, 0.5, -10, -2.5, -0.5, -10, 2.5, 0.5, -10, -2.5, 0.5, -10, -2.5, -0.5, 10, 2.5, 0.5, -10, 2.5, 0.5, 10, 2.5, -0.5, -10, 2.5, 0.5, -10, 2.5, -0.5, 10, 2.5, -0.5, -10, -2.5, 0.5, 10, -2.5, 0.5, -10, -2.5, -0.5, 10, -2.5, 0.5, 10, -2.5, -0.5, -10, -2.5, -0.5 )
 
 [sub_resource type="PrismMesh" id=12]
 left_to_right = 0.0
-size = Vector3( 10, 5, 1 )
+size = Vector3( 10, 5, 5 )
 
 [sub_resource type="ConcavePolygonShape" id=13]
 data = PoolVector3Array( -5, 2.5, 0.5, 5, -2.5, 0.5, -5, -2.5, 0.5, -5, 2.5, -0.5, -5, -2.5, -0.5, 5, -2.5, -0.5, -5, 2.5, 0.5, -5, 2.5, -0.5, 5, -2.5, 0.5, -5, 2.5, -0.5, 5, -2.5, -0.5, 5, -2.5, 0.5, -5, 2.5, -0.5, -5, 2.5, 0.5, -5, -2.5, -0.5, -5, 2.5, 0.5, -5, -2.5, 0.5, -5, -2.5, -0.5, -5, -2.5, 0.5, 5, -2.5, 0.5, -5, -2.5, -0.5, 5, -2.5, 0.5, 5, -2.5, -0.5, -5, -2.5, -0.5 )
 
 [sub_resource type="PrismMesh" id=14]
 left_to_right = 1.0
-size = Vector3( 10, 5, 1 )
+size = Vector3( 10, 5, 5 )
 
 [node name="Wall" type="MeshInstance"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.35862, -5.6476 )
