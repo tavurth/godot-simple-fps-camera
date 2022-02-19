@@ -13,7 +13,6 @@
 
 https://user-images.githubusercontent.com/100964/153240320-7fad22ed-8840-4f54-9ee1-8af7421e9767.mp4
 
-
 A FPS camera made for the purposes of teaching others GDscript and godot.
 
 The purpose of this demo is to show how to create a camera in a simple way.
@@ -44,5 +43,6 @@ than turning left and right.
 
 The player model was loaded as a `.glb` file with animations. The animations were downloaded from [mixamo.com](mixamo.com).
 
-Then an AnimationTree was created and you can explore the two AnimationBlend1D which are used for moving and strafing
-.
+Then an AnimationTree was created and you can explore the two AnimationBlend1D which are used for moving and strafing.
+
+<a href="https://www.buymeacoffee.com/tavurth" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
