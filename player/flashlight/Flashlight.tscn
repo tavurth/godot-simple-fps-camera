@@ -3,15 +3,15 @@
 [ext_resource path="res://player/flashlight/Flashlight.gd" type="Script" id=2]
 [ext_resource path="res://player/flashlight/flashlight.wav" type="AudioStream" id=3]
 
-[node name="Flashlight" type="Spatial"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1 )
+[node name="Flashlight" type="Node3D"]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1 )
 script = ExtResource( 2 )
 
 [node name="Sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 
-[node name="Flashlight" type="SpotLight" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5 )
+[node name="Flashlight" type="SpotLight3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5 )
 light_energy = 2.0
 shadow_enabled = true
 shadow_bias = -0.01

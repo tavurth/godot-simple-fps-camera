@@ -1,14 +1,13 @@
-extends KinematicBody
+extends CharacterBody3D
 
-var velocity = Vector3(0, 0, 0)
 var direction = Vector3(0, 0, 0) # Used for animation
 
 const JUMP = 4
 const PLAYER_MOVE_SPEED = 4
 
-onready var Camera = $Camera
-onready var GRAVITY = ProjectSettings.get("physics/3d/default_gravity") / 1000
-onready var animation_tree = $character/AnimationTree
+@onready var Camera = $Camera3D
+@onready var GRAVITY = ProjectSettings.get("physics/3d/default_gravity") / 1000
+@onready var animation_tree = $character/AnimationTree
 
 func move_forward_back(in_direction: int):
 	"""
@@ -68,9 +67,4 @@ func _physics_process(_delta: float):
 	# Play the run/strafe/idle animation
 	self.blend_animations()
 
-	self.velocity = self.move_and_slide_with_snap(
-		self.velocity,
-		snap_vector,
-		Vector3(0, +1, 0),
-		true
-	)
+	move_and_slide()

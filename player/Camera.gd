@@ -1,6 +1,6 @@
-extends Camera
+extends Camera3D
 
-onready var Player = get_parent()
+@onready var Player = get_parent()
 
 ## Increase this value to give a slower turn speed
 const CAMERA_TURN_SPEED = 200
