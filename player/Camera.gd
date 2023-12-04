@@ -1,6 +1,6 @@
-extends Camera
+extends Camera3D
 
-onready var Player = get_parent()
+@onready var Player = get_parent()
 
 ## Increase this value to give a slower turn speed
 const CAMERA_TURN_SPEED = 200
@@ -9,12 +9,12 @@ func _ready():
 	## Tell Godot that we want to handle input
 	set_process_input(true)
 
-func look_updown_rotation(rotation = 0):
+func look_updown_rotation(new_rotation = 0):
 	"""
 	Returns a new Vector3 which contains only the x direction
 	We'll use this vector to compute the final 3D rotation later
 	"""
-	var toReturn = self.get_rotation() + Vector3(rotation, 0, 0)
+	var toReturn = self.get_rotation() + Vector3(new_rotation, 0, 0)
 
 	##
 	## We don't want the player to be able to bend over backwards
@@ -24,12 +24,12 @@ func look_updown_rotation(rotation = 0):
 
 	return toReturn
 
-func look_leftright_rotation(rotation = 0):
+func look_leftright_rotation(new_rotation = 0):
 	"""
 	Returns a new Vector3 which contains only the y direction
 	We'll use this vector to compute the final 3D rotation later
 	"""
-	return Player.get_rotation() + Vector3(0, rotation, 0)
+	return Player.get_rotation() + Vector3(0, new_rotation, 0)
 
 func _input(event):
 	"""

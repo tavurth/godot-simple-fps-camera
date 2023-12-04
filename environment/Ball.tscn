@@ -1,17 +1,17 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=4 format=3 uid="uid://dl8xj04oxmnsb"]
 
-[ext_resource path="res://environment/ball_material.tres" type="Material" id=1]
+[ext_resource type="Material" path="res://environment/ball_material.tres" id="1_4hjdv"]
 
-[sub_resource type="SphereShape" id=7]
+[sub_resource type="SphereShape3D" id="7"]
 
-[sub_resource type="SphereMesh" id=8]
+[sub_resource type="SphereMesh" id="8"]
+material = ExtResource("1_4hjdv")
 
-[node name="Ball" type="RigidBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.819506, 0, -3.36017 )
+[node name="Ball" type="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.819506, 0, -3.36017)
 
-[node name="CollisionShape" type="CollisionShape" parent="."]
-shape = SubResource( 7 )
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("7")
 
-[node name="MeshInstance" type="MeshInstance" parent="."]
-mesh = SubResource( 8 )
-material/0 = ExtResource( 1 )
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("8")
