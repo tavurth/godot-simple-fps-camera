@@ -24,6 +24,8 @@ You are free to use, modify and merge this in whatever way you like.
 
 - [Godot](https://godotengine.org) 3.x
 
+For Godot 4.2 and higher, please see the "master" branch
+
 <a id="orgb9a9226"></a>
 
 ## Ideas
