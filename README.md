@@ -5,7 +5,7 @@
 ![img](https://img.shields.io/github/repo-size/tavurth/godot-simple-fps-camera.svg)
 ![img](https://img.shields.io/github/languages/code-size/tavurth/godot-simple-fps-camera.svg)
 
-## [Web Demo](https://tavurth.itch.io/godot-simple-fps-camera) ←←←←
+## [Web Demo (3.x)](https://tavurth.itch.io/godot-simple-fps-camera) ←←←←
 
 <img width="1024" alt="Screenshot 2022-02-07 at 00 40 33" src="https://user-images.githubusercontent.com/100964/152702489-7aa8abcf-82bc-448e-b9c3-baf253622e63.png">
 
